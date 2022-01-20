@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+<script type="text/javascript">
+    function play() {
+        var myaudio = document.getElementById("audio");
+        if (myaudio.pause){
+            myaudio.play();
+        }
+        else {myaudio.pause()}
+
+    }
+    function stop(){
+        var myaudio = document.getElementById("audio");
+        myaudio.pause();
+        myaudio.currentTime = 0;
+
+    }
+</script>
+<audio src="Jack Ma - How I Overcame Failure.mp3" id="audio" controls ></audio>
+<form name="form" id="form" method="get" action="#">
+    <input type="button" value="play/pause" onclick = "play();">
+    <input type="button" value="stop" onclick = "stop();">
+
+</form>
+</body>
+</html>
